@@ -1,0 +1,10 @@
+#ucsc  hg19 & hg38 NCBIrefseq
+for gn in hg19 hg38
+do
+wget -bc  --user-agent='User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36'  --post-data="clade=mammal&org=Human&db=$gn&hgta_group=genes&hgta_track=refSeqComposite&hgta_table=ncbiRefSeq&hgta_regionType=genome&hgta_outputType=gff&boolshad.sendToGalaxy=0&boolshad.sendToGreat=0&boolshad.sendToGenomeSpace=0&hgta_outFileName=$gn.gtf&hgta_compressType=none&hgta_doTopSubmit=get+output" -O $gn.gtf -o $gn.log  http://genome-asia.ucsc.edu/cgi-bin/hgTables
+done
+#ucsc mm9 & mm10 NCBIrefseq
+for gn in mm9 mm10
+do
+wget -bc  --user-agent='User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36'  --post-data="clade=mammal&org=Mouse&db=$gn&hgta_group=genes&hgta_track=refSeqComposite&hgta_table=ncbiRefSeq&hgta_regionType=genome&hgta_outputType=gff&boolshad.sendToGalaxy=0&boolshad.sendToGreat=0&boolshad.sendToGenomeSpace=0&hgta_outFileName=$gn.gtf&hgta_compressType=none&hgta_doTopSubmit=get+output" -O $gn.gtf -o $gn.log  http://genome-asia.ucsc.edu/cgi-bin/hgTables
+done
