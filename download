@@ -1,3 +1,5 @@
+#!/bin/bash
+#writen by dh
 #ucsc  hg19 & hg38 NCBIrefseq
 for gn in hg19 hg38
 do
